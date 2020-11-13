@@ -14,8 +14,8 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.*;
 
 public class OrganizationTest {
-    private static final String KEY = "";
-    private static final String TOKEN = "";
+    private static final String KEY = "03d14d3d1406ccfa2a667c41411adfd2";
+    private static final String TOKEN = "9f1bed34090134af6b3a3ebd6863659b2fd54499dee9b298f1ada07ef6986881";
 
     private static Stream<Arguments> createOrganizationData() {
 
@@ -101,7 +101,7 @@ public class OrganizationTest {
                 .when()
                 .post("https://api.trello.com/1/organizations")
                 .then()
-                .statusCode(200)
+                .statusCode(400)
                 .extract()
                 .response();
 
